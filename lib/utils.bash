@@ -76,6 +76,7 @@ install_version() {
 	(
 		mkdir -p "$install_path"
 		cp "$ASDF_DOWNLOAD_PATH"/cargo-shuttle "$install_path"
+		test -e "$ASDF_DOWNLOAD_PATH"/shuttle && cp "$ASDF_DOWNLOAD_PATH"/shuttle "$install_path"
 
 		local tool_cmd
 		tool_cmd="$(echo "$TOOL_TEST" | cut -d' ' -f1)"
